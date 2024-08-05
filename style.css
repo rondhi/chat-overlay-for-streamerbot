@@ -1,0 +1,105 @@
+body,
+html,
+#chat {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@keyframes append-animate {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes chat {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.chat-message {
+  animation: append-animate 0.3s linear;
+  transition: max-height 0.3s ease-out;
+  height: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  hyphenate-character: "»";
+}
+
+.msg-badges {
+  vertical-align: middle;
+}
+
+.msg-user::after {
+  content: ": ";
+}
+
+.msg-pronoun {
+  padding: 0rem 0.3rem;
+}
+
+.msg-badges > img {
+  width: 1rem;
+  box-shadow: 0 0 2px black;
+}
+
+.msg-text > img {
+  vertical-align: middle;
+  width: 1.4rem;
+}
+
+.msg-text > .announcement {
+  font-weight: bold;
+}
+
+.msg-timestamp {
+  padding: 0rem 0.2em;
+  font-size: 0.8em;
+}
+
+.msg-user {
+  font-weight: bold;
+}
+
+#version-notice {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffc39a;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #950000;
+  box-sizing: border-box;
+}
+
+#connection-status {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #410000;
+  background-color: #ff827c;
+  box-sizing: border-box;
+}

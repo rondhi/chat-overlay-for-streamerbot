@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/@streamerbot/client/dist/streamerbot-client.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text" id="enable-bubbles">
+        #chat {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .chat-message {
+            margin: 0 5px 5px 5px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 2px solid #ffe0f0;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .msg-text,
+        .msg-user {
+            padding: 0.4rem;
+            display: block;
+        }
+
+        .msg-user {
+            background: #ffe0f0;
+            font-weight: bold;
+            color: black;
+        }
+
+        .msg-pronoun {
+            right: 1em;
+            position: absolute;
+        }
+
+        .msg-timestamp {
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            margin-right: 0.25rem;
+            vertical-align: middle;
+            padding: 0.1rem 0.3rem;
+            color: white;
+            font-size: .6rem;
+        }
+
+        .msg-user {
+            font-weight: normal;
+        }
+
+        .msg-user::after {
+            content: "";
+        }
+
+        .msg-text>.announcement {
+            display: block;
+        }
+    </style>
+
+    <style id="enable-horizontal" type="text">
+        #chat {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            white-space: nowrap;
+        }
+
+        .chat-message {
+            margin-left: 1rem;
+            float: left;
+        }
+
+        .msg-user, .msg-text {
+            padding: 0.4rem;
+        }
+    </style>
+
+    <style id="horizontal-bubbles" type="text">
+        .msg-pronoun {
+            position: inherit;
+        }
+
+        .msg-user {
+            text-align: right;
+        }
+
+        .msg-text>.announcement {
+            display: inline;
+        }
+    </style>
+
+    <style id="user-styles" type="text/css"></style>
+</head>
+
+<body>
+    <div id="chat"></div>
+    <div id="version-notice" style="display: none;"></div>
+    <div id="connection-status" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
