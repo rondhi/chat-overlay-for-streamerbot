@@ -116,7 +116,7 @@ const iframe = document.querySelector("#preview");
 const chatFrame = document.querySelector("#chat-frame");
 const configSection = document.querySelector("#config-section");
 const obsLink = document.querySelector("#obs-url");
-const baseUrl = window.location.href.replace("generator.html", "chat.html?");
+const baseUrl = window.location.href.replace("generator.html", "index.html?");
 
 const copyButton = document.querySelector("#copy-button");
 const loadButton = document.querySelector("#load-obs-button");
